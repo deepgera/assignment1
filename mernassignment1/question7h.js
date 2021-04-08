@@ -1,0 +1,34 @@
+n=5,r=1,c=0,s=1;
+flag=0;
+rm=1;
+//while(rm)
+while(r<=2*n-1){
+    while(s<=n-rm){
+        process.stdout.write("*"+"\t");
+        s++;
+    }
+    s=0;
+    while(c<rm){
+        c++;
+        process.stdout.write("\t");   
+    }
+    c--;
+    while(c>=1){
+        process.stdout.write("\t");
+        c--;
+    }
+    while(s<=n-rm){
+        process.stdout.write("*"+"\t");
+        s++;
+    }
+    s=0;
+    process.stdout.write("\n");
+   if(rm<n&&flag==0){
+       rm++;
+    }
+    else{
+        flag=1
+        rm--;
+    }
+   r++;
+}
